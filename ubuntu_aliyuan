@@ -1,4 +1,4 @@
-sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak #备份
+sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak #备份
 sudo vim /etc/apt/sources.list #修改
 sudo apt-get update #更新列表
 sudo apt-get dist-upgrade
