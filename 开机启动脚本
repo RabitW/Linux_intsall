@@ -1,0 +1,5 @@
+ubuntu  
+
+/etc/rc.local
+
+/bin/bash /root/start.sh
