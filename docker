@@ -1,0 +1,20 @@
+第一步：
+使用默认的docker0的网桥启动实例
+docker run -it --privileged=true ansible/ubuntu14.04-ansible:latest /bin/bash
+换成你的nb
+第二部创建我们想要地址的网桥
+docker network create --subnet=172.30.0.0/16 docker2
+地址段自己指定
+ip a 能看到我们创建的网桥
+br-e5954d78462f
+让后把地址指定为docker
+需要在物理机装pipework
+# wget https://github.com/jpetazzo/pipework/archive/master.zip
+# unzip pipework-master.zip
+# cp pipework-master/pipework  /usr/local/bin/
+# chmod +x /usr/local/bin/pipework
+
+
+docker ps 查看容器得到222ca027844a
+pipework br-e5954d78462f 222ca027844a 172.30.0.10/16@172.30.0.1
+这样就可以为docker指定172.30.0.10的地址网关是172.30.0.1
