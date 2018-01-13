@@ -1,0 +1,7 @@
+git pull  拉下代码（以线上为准 冲突）
+git  add . 往上推，加到本地存储库
+git  commit -m "注释"
+git  push  往上推代码
+git checkout -b "分支名"
+git  push origin 本地分支名 : 远端分支名
+git branch dev 切到dev分支
